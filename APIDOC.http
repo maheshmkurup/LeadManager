@@ -1,0 +1,54 @@
+#schema
+#fields:[name,mobile,email,college,qualification,passout_year,source,course,course_mode,status,created_date]
+
+#api for listing all leads
+###
+
+GET http://127.0.0.1:8000/api/leads/
+
+#api call for creating lead
+###
+
+POST http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+
+{
+    "name":"Arjun",
+    "mobile":7974023212,
+    "email":"arjun@gmail.com",
+    "college":"ss college",
+    "qualification":"BCA",
+    "passout_year":2023
+}
+
+#api call for retrieving a lead
+###
+
+GET http://127.0.0.1:8000/api/leads/2/
+
+#api call for deleting a lead
+###
+
+DELETE http://127.0.0.1:8000/api/leads/3/
+
+#api call for updating a lead
+###
+
+PUT http://127.0.0.1:8000/api/leads/2/
+Content-Type: application/json
+
+{
+   "id": 2,
+  "name": "Vijay",
+  "mobile": "7975024545",
+  "email": "vijay30@gmail.com",
+  "college": "ss college",
+  "qualification": "BCA",
+  "passout_year": "2024",
+  "source": "walkin",
+  "course": "PYTHON DJANGO",
+  "course_mode": "OFFLINE",
+  "status": "FOLLOWUP",
+  "created_date": "2025-02-24T16:07:47.676556Z",
+  "updated_at": "2025-02-24T16:07:47.676556Z" 
+}
